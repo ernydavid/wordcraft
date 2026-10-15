@@ -5,8 +5,8 @@ use std::sync::Arc;
 use egui::{Align2, Color32, CornerRadius, FontData, FontDefinitions, FontFamily, FontId, Rect, Stroke, Visuals};
 
 /// WordCraft's app colour (and its darker ink for text on light backgrounds).
-pub const APP_COLOR: Color32 = Color32::from_rgb(0x3B, 0x5B, 0xDB);
-pub const APP_INK: Color32 = Color32::from_rgb(0x2B, 0x47, 0xB5);
+pub const APP_COLOR: Color32 = Color32::from_rgb(0x21, 0x4E, 0x89);
+pub const APP_INK: Color32 = Color32::from_rgb(0x16, 0x38, 0x69);
 
 /// The interface theme setting (File › Options › General, View › Interface Theme): a fixed light or
 /// dark palette, or `System`, which follows the OS light/dark appearance live (#115). Dark page
