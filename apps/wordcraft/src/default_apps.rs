@@ -4,7 +4,7 @@
 //! defaults (`packaging/windows/wordcraft.wxs`, the `.desktop` file's `MimeType=`, `Info.plist`).
 //! This is the button that makes it the default when the user asks:
 //! - **Windows** doesn't let apps set defaults: it opens Settings › Default apps on WordCraft's
-//!   page (`ms-settings:defaultapps?registeredAppMachine=WordCraft`; Windows 10 ignores the query
+//!   page (`ms-settings:defaultapps?registeredAppMachine=Words`; Windows 10 ignores the query
 //!   and shows the Default apps list), where the user picks WordCraft per type.
 //! - **Linux and BSD**: `xdg-mime default ai.storyteller.wordcraft.desktop <types>` for
 //!   [`WORD_MIME_TYPES`], which writes the user's `mimeapps.list`. Only when the desktop entry is
