@@ -1,5 +1,7 @@
 # Words
 
+![Words — logo](branding/words/assets/words-logo.svg)
+
 **Words** es un editor de documentos multiplataforma derivado de [WordCraft](https://github.com/storytold/wordcraft) (Rust + egui).
 Es un proyecto independiente; no está afiliado ni respaldado por ArtCraft.
 
