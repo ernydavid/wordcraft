@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleDevelopmentRegion</key><string>en</string>
+<key>CFBundleDisplayName</key><string>Words</string>
+<key>CFBundleName</key><string>Words</string>
+<key>CFBundleExecutable</key><string>Words</string>
+<key>CFBundleIdentifier</key><string>io.github.ernydavid.words</string>
+<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>@SHORT_VERSION@</string>
+<key>CFBundleVersion</key><string>@SHORT_VERSION@</string>
+<key>CFBundleIconFile</key><string>Words.icns</string>
+<key>LSMinimumSystemVersion</key><string>11.0</string>
+<key>LSApplicationCategoryType</key><string>public.app-category.productivity</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSRequiresAquaSystemAppearance</key><false/>
+<key>CFBundleDocumentTypes</key><array><dict>
+<key>CFBundleTypeName</key><string>Documents</string>
+<key>CFBundleTypeRole</key><string>Editor</string>
+<key>LSHandlerRank</key><string>Alternate</string>
+<key>LSItemContentTypes</key><array>
+<string>org.openxmlformats.wordprocessingml.document</string>
+<string>org.openxmlformats.wordprocessingml.template</string>
+<string>com.microsoft.word.doc</string>
+<string>org.oasis-open.opendocument.text</string>
+<string>public.rtf</string><string>public.html</string><string>public.plain-text</string>
+</array></dict></array>
+<key>NSHumanReadableCopyright</key>
+<string>Words is based on WordCraft; original authors retain their copyright.</string>
+</dict></plist>
