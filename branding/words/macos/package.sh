@@ -14,6 +14,7 @@ cargo build --release --locked -p wordcraft --target aarch64-apple-darwin --targ
 lipo -create "$CARGO_TARGET_DIR/aarch64-apple-darwin/release/wordcraft" "$CARGO_TARGET_DIR/x86_64-apple-darwin/release/wordcraft" -output "$APP/Contents/MacOS/Words"
 chmod +x "$APP/Contents/MacOS/Words"
 cp "$ROOT/branding/words/generated/words.icns" "$APP/Contents/Resources/Words.icns"
+cp "$ROOT"/branding/words/generated/documents/*.icns "$APP/Contents/Resources/"
 for f in LICENSE-MIT LICENSE-APACHE NOTICE ATTRIBUTION.md; do cp "$ROOT/$f" "$APP/Contents/Resources/Licenses/"; done
 sed -e "s/@SHORT_VERSION@/${VERSION%%-*}/g" "$HERE/Info.plist.in" > "$APP/Contents/Info.plist"
 plutil -lint "$APP/Contents/Info.plist"
