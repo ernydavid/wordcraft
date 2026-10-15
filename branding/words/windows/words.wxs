@@ -137,9 +137,9 @@
         <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".htm" Value="" Type="string"/>
       </Component>
       <Component Id="WordsRegistration" Guid="*">
-        <RegistryValue Root="HKLM" Key="Software\\RegisteredApplications" Name="Words" Value="Software\\Words\\Capabilities" Type="string" KeyPath="yes"/>
-        <RegistryValue Root="HKLM" Key="Software\\Words\\Capabilities" Name="ApplicationName" Value="Words" Type="string"/>
-        <RegistryValue Root="HKLM" Key="Software\\Words\\Capabilities" Name="ApplicationDescription" Value="Words document editor" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\RegisteredApplications" Name="Words" Value="Software\Words\Capabilities" Type="string" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities" Name="ApplicationName" Value="Words" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities" Name="ApplicationDescription" Value="Words document editor" Type="string"/>
       </Component>
     </ComponentGroup>
   </Fragment>
