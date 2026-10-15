@@ -28,6 +28,119 @@
         <File Source="$(var.BinDir)\NOTICE"/>
         <File Source="$(var.BinDir)\ATTRIBUTION.md"/>
       </Component>
+      <Component Id="WordsDocumentDOCX" Guid="*">
+        <File Id="WordsDOCXIcon" Source="$(var.DocumentIconDir)\words-docx.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCX" Name="FriendlyTypeName" Value="Words DOCX document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCX\DefaultIcon" Value="[#WordsDOCXIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCX\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.docx\OpenWithProgids" Name="Words.DOCX" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".docx" Value="Words.DOCX" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".docx" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentDOC" Guid="*">
+        <File Id="WordsDOCIcon" Source="$(var.DocumentIconDir)\words-doc.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOC" Name="FriendlyTypeName" Value="Words DOC document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOC\DefaultIcon" Value="[#WordsDOCIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOC\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.doc\OpenWithProgids" Name="Words.DOC" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".doc" Value="Words.DOC" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".doc" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentDOCM" Guid="*">
+        <File Id="WordsDOCMIcon" Source="$(var.DocumentIconDir)\words-docm.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCM" Name="FriendlyTypeName" Value="Words DOCM document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCM\DefaultIcon" Value="[#WordsDOCMIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOCM\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.docm\OpenWithProgids" Name="Words.DOCM" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".docm" Value="Words.DOCM" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".docm" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentDOTX" Guid="*">
+        <File Id="WordsDOTXIcon" Source="$(var.DocumentIconDir)\words-dotx.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTX" Name="FriendlyTypeName" Value="Words DOTX document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTX\DefaultIcon" Value="[#WordsDOTXIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTX\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.dotx\OpenWithProgids" Name="Words.DOTX" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".dotx" Value="Words.DOTX" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".dotx" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentDOTM" Guid="*">
+        <File Id="WordsDOTMIcon" Source="$(var.DocumentIconDir)\words-dotm.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTM" Name="FriendlyTypeName" Value="Words DOTM document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTM\DefaultIcon" Value="[#WordsDOTMIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOTM\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.dotm\OpenWithProgids" Name="Words.DOTM" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".dotm" Value="Words.DOTM" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".dotm" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentDOT" Guid="*">
+        <File Id="WordsDOTIcon" Source="$(var.DocumentIconDir)\words-dot.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOT" Name="FriendlyTypeName" Value="Words DOT document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOT\DefaultIcon" Value="[#WordsDOTIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.DOT\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.dot\OpenWithProgids" Name="Words.DOT" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".dot" Value="Words.DOT" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".dot" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentRTF" Guid="*">
+        <File Id="WordsRTFIcon" Source="$(var.DocumentIconDir)\words-rtf.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.RTF" Name="FriendlyTypeName" Value="Words RTF document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.RTF\DefaultIcon" Value="[#WordsRTFIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.RTF\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.rtf\OpenWithProgids" Name="Words.RTF" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".rtf" Value="Words.RTF" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".rtf" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentODT" Guid="*">
+        <File Id="WordsODTIcon" Source="$(var.DocumentIconDir)\words-odt.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.ODT" Name="FriendlyTypeName" Value="Words ODT document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.ODT\DefaultIcon" Value="[#WordsODTIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.ODT\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.odt\OpenWithProgids" Name="Words.ODT" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".odt" Value="Words.ODT" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".odt" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentTXT" Guid="*">
+        <File Id="WordsTXTIcon" Source="$(var.DocumentIconDir)\words-txt.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.TXT" Name="FriendlyTypeName" Value="Words TXT document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.TXT\DefaultIcon" Value="[#WordsTXTIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.TXT\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.txt\OpenWithProgids" Name="Words.TXT" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".txt" Value="Words.TXT" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".txt" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentMD" Guid="*">
+        <File Id="WordsMDIcon" Source="$(var.DocumentIconDir)\words-md.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.MD" Name="FriendlyTypeName" Value="Words MD document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.MD\DefaultIcon" Value="[#WordsMDIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.MD\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.md\OpenWithProgids" Name="Words.MD" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".md" Value="Words.MD" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".md" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentHTML" Guid="*">
+        <File Id="WordsHTMLIcon" Source="$(var.DocumentIconDir)\words-html.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTML" Name="FriendlyTypeName" Value="Words HTML document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTML\DefaultIcon" Value="[#WordsHTMLIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTML\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.html\OpenWithProgids" Name="Words.HTML" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".html" Value="Words.HTML" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".html" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsDocumentHTM" Guid="*">
+        <File Id="WordsHTMIcon" Source="$(var.DocumentIconDir)\words-htm.ico" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTM" Name="FriendlyTypeName" Value="Words HTM document" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTM\DefaultIcon" Value="[#WordsHTMIcon]" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Words.HTM\shell\open\command" Value="&quot;[#WordsExe]&quot; &quot;%1&quot;" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\.htm\OpenWithProgids" Name="Words.HTM" Value="" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Words\Capabilities\FileAssociations" Name=".htm" Value="Words.HTM" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\Classes\Applications\Words.exe\SupportedTypes" Name=".htm" Value="" Type="string"/>
+      </Component>
+      <Component Id="WordsRegistration" Guid="*">
+        <RegistryValue Root="HKLM" Key="Software\\RegisteredApplications" Name="Words" Value="Software\\Words\\Capabilities" Type="string" KeyPath="yes"/>
+        <RegistryValue Root="HKLM" Key="Software\\Words\\Capabilities" Name="ApplicationName" Value="Words" Type="string"/>
+        <RegistryValue Root="HKLM" Key="Software\\Words\\Capabilities" Name="ApplicationDescription" Value="Words document editor" Type="string"/>
+      </Component>
     </ComponentGroup>
   </Fragment>
 </Wix>
