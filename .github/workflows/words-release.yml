@@ -1,0 +1,152 @@
+name: Words - Build and Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [custom]
+    tags: ['words-v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: words-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  icons:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pillow cairosvg
+      - run: python branding/words/generate_icons.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: words-icons
+          path: branding/words/generated/
+          if-no-files-found: error
+
+  windows:
+    needs: icons
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: words-icons
+          path: branding/words/generated/
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - uses: Swatinem/rust-cache@v2
+      - name: Install WiX v5
+        shell: pwsh
+        run: |
+          dotnet tool install --global wix --version 5.0.2
+          "$env:USERPROFILE\.dotnet\tools" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+      - name: Package Windows
+        shell: pwsh
+        env:
+          WINDOWS_CERTIFICATE: ${{ secrets.WINDOWS_CERTIFICATE }}
+          WINDOWS_CERTIFICATE_PASSWORD: ${{ secrets.WINDOWS_CERTIFICATE_PASSWORD }}
+        run: pwsh branding/words/windows/package.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: words-windows
+          path: |
+            dist/release/Words-*-Windows-*.msi
+            dist/release/Words-*-Windows-*.zip
+          if-no-files-found: error
+
+  macos:
+    needs: icons
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: words-icons
+          path: branding/words/generated/
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin,x86_64-apple-darwin
+      - uses: Swatinem/rust-cache@v2
+      - name: Import Developer ID when available
+        env:
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: bash packaging/macos/import-cert.sh
+      - name: Package macOS
+        env:
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: bash branding/words/macos/package.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: words-macos
+          path: dist/release/Words-*-macOS-*.dmg
+          if-no-files-found: error
+
+  web:
+    needs: icons
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: words-icons
+          path: branding/words/generated/
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+      - name: Install Trunk
+        run: cargo install trunk --locked
+      - name: Package Web
+        run: bash branding/words/web/package.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: words-web
+          path: dist/release/Words-*-Web.zip
+          if-no-files-found: error
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/web
+
+  deploy-web:
+    if: github.ref == 'refs/heads/custom'
+    needs: web
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  publish-release:
+    if: startsWith(github.ref, 'refs/tags/words-v')
+    needs: [windows, macos, web]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: words-*
+          path: release-assets
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: Words ${{ github.ref_name }}
+          generate_release_notes: true
+          files: release-assets/*
+          fail_on_unmatched_files: true
