@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <!-- Own MSI identity: never reuse WordCraft's UpgradeCode or component GUIDs. -->
+  <Package Name="Words" Manufacturer="Words Project" Version="$(var.Version)"
+           UpgradeCode="A888DE9F-0C63-437E-9E39-A00E4A0140CA" Language="1033"
+           Scope="perMachine" Compressed="yes">
+    <SummaryInformation Description="Words document editor" Manufacturer="Words Project"/>
+    <MajorUpgrade DowngradeErrorMessage="A newer Words version is installed."/>
+    <MediaTemplate EmbedCab="yes"/>
+    <Icon Id="WordsIcon" SourceFile="$(var.IconPath)"/>
+    <Property Id="ARPPRODUCTICON" Value="WordsIcon"/>
+    <StandardDirectory Id="ProgramFiles6432Folder">
+      <Directory Id="INSTALLFOLDER" Name="Words"/>
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder"/>
+    <Feature Id="Main" Title="Words" Level="1"><ComponentGroupRef Id="WordsFiles"/></Feature>
+  </Package>
+  <Fragment>
+    <ComponentGroup Id="WordsFiles" Directory="INSTALLFOLDER">
+      <Component Id="WordsApp" Guid="073E3BBA-C2E3-44F8-8660-E288B4D1E877">
+        <File Id="WordsExe" Source="$(var.BinDir)\Words.exe" KeyPath="yes">
+          <Shortcut Id="WordsShortcut" Directory="ProgramMenuFolder" Name="Words"
+                    Description="Words document editor" WorkingDirectory="INSTALLFOLDER"
+                    Advertise="yes" Icon="WordsIcon" IconIndex="0"/>
+        </File>
+        <File Source="$(var.BinDir)\LICENSE-MIT"/>
+        <File Source="$(var.BinDir)\LICENSE-APACHE"/>
+        <File Source="$(var.BinDir)\NOTICE"/>
+        <File Source="$(var.BinDir)\ATTRIBUTION.md"/>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
