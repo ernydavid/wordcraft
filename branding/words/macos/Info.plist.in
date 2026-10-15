@@ -15,17 +15,20 @@
 <key>LSApplicationCategoryType</key><string>public.app-category.productivity</string>
 <key>NSHighResolutionCapable</key><true/>
 <key>NSRequiresAquaSystemAppearance</key><false/>
-<key>CFBundleDocumentTypes</key><array><dict>
-<key>CFBundleTypeName</key><string>Documents</string>
-<key>CFBundleTypeRole</key><string>Editor</string>
-<key>LSHandlerRank</key><string>Alternate</string>
-<key>LSItemContentTypes</key><array>
-<string>org.openxmlformats.wordprocessingml.document</string>
-<string>org.openxmlformats.wordprocessingml.template</string>
-<string>com.microsoft.word.doc</string>
-<string>org.oasis-open.opendocument.text</string>
-<string>public.rtf</string><string>public.html</string><string>public.plain-text</string>
-</array></dict></array>
+<key>CFBundleDocumentTypes</key><array>
+<dict><key>CFBundleTypeName</key><string>Words DOCX document</string><key>CFBundleTypeExtensions</key><array><string>docx</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-docx.icns</string><key>LSItemContentTypes</key><array><string>org.openxmlformats.wordprocessingml.document</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words DOC document</string><key>CFBundleTypeExtensions</key><array><string>doc</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-doc.icns</string><key>LSItemContentTypes</key><array><string>com.microsoft.word.doc</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words DOCM document</string><key>CFBundleTypeExtensions</key><array><string>docm</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-docm.icns</string><key>LSItemContentTypes</key><array><string>org.openxmlformats.wordprocessingml.document.macroenabled</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words DOTX document</string><key>CFBundleTypeExtensions</key><array><string>dotx</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-dotx.icns</string><key>LSItemContentTypes</key><array><string>org.openxmlformats.wordprocessingml.template</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words DOTM document</string><key>CFBundleTypeExtensions</key><array><string>dotm</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-dotm.icns</string><key>LSItemContentTypes</key><array><string>org.openxmlformats.wordprocessingml.template.macroenabled</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words DOT document</string><key>CFBundleTypeExtensions</key><array><string>dot</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-dot.icns</string><key>LSItemContentTypes</key><array><string>com.microsoft.word.dot</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words RTF document</string><key>CFBundleTypeExtensions</key><array><string>rtf</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-rtf.icns</string><key>LSItemContentTypes</key><array><string>public.rtf</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words ODT document</string><key>CFBundleTypeExtensions</key><array><string>odt</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-odt.icns</string><key>LSItemContentTypes</key><array><string>org.oasis-open.opendocument.text</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words TXT document</string><key>CFBundleTypeExtensions</key><array><string>txt</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-txt.icns</string><key>LSItemContentTypes</key><array><string>public.plain-text</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words MD document</string><key>CFBundleTypeExtensions</key><array><string>md</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-md.icns</string><key>LSItemContentTypes</key><array><string>net.daringfireball.markdown</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words HTML document</string><key>CFBundleTypeExtensions</key><array><string>html</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-html.icns</string><key>LSItemContentTypes</key><array><string>public.html</string></array></dict>
+<dict><key>CFBundleTypeName</key><string>Words HTM document</string><key>CFBundleTypeExtensions</key><array><string>htm</string></array><key>CFBundleTypeRole</key><string>Editor</string><key>LSHandlerRank</key><string>Alternate</string><key>CFBundleTypeIconFile</key><string>words-htm.icns</string><key>LSItemContentTypes</key><array><string>public.html</string></array></dict>
+</array>
 <key>NSHumanReadableCopyright</key>
 <string>Words is based on WordCraft; original authors retain their copyright.</string>
 </dict></plist>
