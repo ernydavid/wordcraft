@@ -39,7 +39,8 @@ if ($env:WINDOWS_CERTIFICATE) {
 $Msi = Join-Path $Dist "Words-$Version-Windows-$Arch.msi"
 & wix build (Join-Path $PSScriptRoot 'words.wxs') -arch x64 `
   -d "Version=$MsiVersion" -d "BinDir=$Stage" `
-  -d "IconPath=$(Join-Path $Root 'branding\words\generated\words.ico')" -o $Msi
+  -d "IconPath=$(Join-Path $Root 'branding\words\generated\words.ico')" `
+  -d "DocumentIconDir=$(Join-Path $Root 'branding\words\generated\documents')" -o $Msi
 if ($LASTEXITCODE -ne 0) { throw 'WiX MSI packaging failed' }
 $PortableZip = Join-Path $Dist "Words-$Version-Windows-$Arch-portable.zip"
 if (Test-Path $PortableZip) { Remove-Item $PortableZip -Force }
