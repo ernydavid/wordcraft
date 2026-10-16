@@ -147,9 +147,9 @@ jobs:
           merge-multiple: true
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ startsWith(github.ref, 'refs/tags/words-v') && github.ref_name || 'words-v0.7.0-beta.1' }}
+          tag_name: ${{ startsWith(github.ref, 'refs/tags/words-v') && github.ref_name || 'words-v0.7.1-beta.2' }}
           target_commitish: ${{ github.sha }}
-          name: Words 0.7.0 Beta 1
+          name: Words 0.7.1 Beta 2
           prerelease: true
           generate_release_notes: true
           files: release-assets/*
