@@ -5,17 +5,17 @@
 **Words** es un editor de documentos multiplataforma derivado de [WordCraft](https://github.com/storytold/wordcraft) (Rust + egui).
 Es un proyecto independiente; no está afiliado ni respaldado por ArtCraft.
 
-## Descargar Words — versión beta
+## Descargar Words — versión beta 0.7.1
 
 > **Versión de prueba:** los instaladores aún no tienen firma digital pública de Windows ni notarización de Apple. Descarga los archivos únicamente desde este repositorio y verifica su procedencia.
 
 | Sistema | Descargar | Formato |
 |---|---|---|
-| Windows 64 bits | [**Instalar Words**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.0-beta.1/Words-0.7.0-Windows-x64.msi) | MSI |
-| Windows portable | [**Words portable**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.0-beta.1/Words-0.7.0-Windows-x64-portable.zip) | ZIP |
-| macOS Intel / Apple Silicon | [**Instalar Words**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.0-beta.1/Words-0.7.0-macOS-universal.dmg) | DMG |
+| Windows 64 bits | [**Instalar Words**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.1-beta.2/Words-0.7.1-Windows-x64.msi) | MSI |
+| Windows portable | [**Words portable**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.1-beta.2/Words-0.7.1-Windows-x64-portable.zip) | ZIP |
+| macOS Intel / Apple Silicon | [**Instalar Words**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.1-beta.2/Words-0.7.1-macOS-universal.dmg) | DMG |
 | Navegador | [**Words Web**](https://ernydavid.github.io/wordcraft/) | Aplicación web |
-| Web (archivos) | [**Descargar sitio web**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.0-beta.1/Words-0.7.0-Web.zip) | ZIP |
+| Web (archivos) | [**Descargar sitio web**](https://github.com/ernydavid/wordcraft/releases/download/words-v0.7.1-beta.2/Words-0.7.1-Web.zip) | ZIP |
 
 [**Ver todas las versiones y descargas en GitHub Releases →**](https://github.com/ernydavid/wordcraft/releases)
 
